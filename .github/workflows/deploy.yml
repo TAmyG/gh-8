@@ -25,6 +25,8 @@ jobs:
     services:
       mongodb: # this name is up to you
         image: mongo
+        ports:
+          - 27017:27017 # needed when you are not using container to run the WF
         env:
           MONGO_INITDB_ROOT_USERNAME: root
           MONGO_INITDB_ROOT_PASSWORD: example
