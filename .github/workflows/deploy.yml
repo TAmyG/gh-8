@@ -22,10 +22,10 @@ jobs:
       MONGODB_USERNAME: root
       MONGODB_PASSWORD: example
       PORT: 8080
-    services: 
+    services:
       mongodb: # this name is up to you
         image: mongo
-        env:
+        env: |
           MONGO_INITDB_ROOT_USERNAME:root
           MONGO_INITDB_ROOT_PASSWORD: example
     steps:
