@@ -11,12 +11,12 @@ jobs:
   test:
     environment: testing
     runs-on: ubuntu-latest
-    container: # test job will run on this container. It's not needed
-      image: node:16
-      # env: #envs for the image. see docker hub docs
+    #container: # test job will run on this container. It's not needed
+    #  image: node:16
+    # env: #envs for the image. see docker hub docs
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb
-      MONGODB_CLUSTER_ADDRESS: mongodb #same name of service
+      MONGODB_CLUSTER_ADDRESS: 127.0.0.1:27017 #mongodb: if you are running the WF with container #same name of service
       #MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
       #MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       MONGODB_USERNAME: root
